@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>SMA Negeri Praktikum Web</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">LOG IN</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Student</a></li>
+					<li><a href="#Teacher" data-toggle="tab">Teacher</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form action="dashboard/php/multiLevel_studentLogin.php" method="POST" role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="username" id="username" placeholder="Username" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="password" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Login
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Teacher">
+						<form action="dashboard/php/multiLevel_teacherLogin.php" method="POST" role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="username" id="username" placeholder="Username" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="password" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Login
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" style="width: 80px;" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+						<li class="nav-item"><a class="nav-link" href="teachers.html">Guru</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about.html">About Us</a></li> 
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Log In</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="all-title-box" style="background: url(images/baner.jpeg);">
+		<div class="container text-center">
+			<h1>About Us<span class="m_1">PRIMA DALAM PRESTASI, SANTUN DALAM PERILAKU</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>About</h3>
+                    <p class="lead">SMA Negeri Praktikum Web adalah sekolah yang didirikan pada tahun 1990. Sekolah kami adalah sekolah virtual yang tidak menempati ruang secara nyata dan hanya sebatas pada realitas maya. Meski demikian komitmen kami tetap untuk memberikan yang terbaik bagi peserta didik</p>
+                </div>
+            </div><!-- end title -->
+
+<div class="hmv-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-achievement"></i></div>
+						<h3>Vision</h3>
+						<div class="tr-pa">M</div>
+						<p>Sekolah sebagai pusat keunggulan imtaq, iptek, berwawasan lingkungan, dan mengintegrasikan pendidikan kependudukan serta mampu bersaing di era global selaras dengan kepribadian nasional</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-eye"></i></div>
+						<h3>Mission</h3>
+						<div class="tr-pa">V</div>
+						<p>1. Melaksanakan kegiatan untuk meningkatkan akhlak mulia yang berlandaskan keimanan dan ketaqwaan kepada Tuhan Yang Maha Esa.</p><br>
+						<p>2. Melaksanakan kegiatan yang sesuai dengan kepribadian bangsa.</p><br>
+						<p>3. Mengupayakan pelestarian fungsi lingkungan dan mencegah pencemaran lingkungan hidup.</p><br>
+						<p>4. Menumbuhkembangkan semangat keunggulan kepada seluruh warga sekolah.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-history"></i></div>
+						<h3>History</h3>
+						<div class="tr-pa">H</div>
+						<p>SMA Negeri Praktikum Web didirikan atas ide dari dua orang pendirinya. SMA ini didirikan dengan pertimbangan meningkatnya jumlah siswa sekolah menengah sehingga dibutuhkan tempat untuk menampung lebih banyak siswa</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>Prestasi SMA Negeri Praktikum Web</h4>
+                        <h2>Medali Olimpiade Informatika Asia-Pasifik</h2>
+                        <p>Siswa SMA Negeri Praktikum Web berhasil meraih satu medali emas, tiga medali perak, dan dua medali perunggu dalam perhelatan Olimpiade Informatika Asia Pacific Informatics Olympiad (APIO) 2021 pada 21-26 Mei 2021. </p>
+
+                        <p>Siswa yang berhasil meraih medali tersebut emas yaitu Rama Aryasuta Pangestu. Peraih medali perak masing-masing diraih oleh Nicholas Patrick, Pikatan Arya Bramajati , dan Juan Carlo Vieri.</p>
+
+                        <a href="blog/post_02.html" class="hover-btn-new orange"><span>Read More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_02.jpeg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpeg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Medali Olimpiade Fisika</h2>
+                        <p>SMA Peter Addison Sadhani berhasil meraih medali emas dari kompetisi Asian Physics Olympiad (APhO). Dikutip dari rilis yang diterima detikEdu, Peter juga berhasil meraih nilai tertinggi kedua dalam kompetisi tersebut.</p>
+
+                        <p>Jumlah nilai Peter hanya selisih 0,2 dengan yang peraih nilai tertinggi pertama. Dengan nilai tersebut, Peter dari (SMA Santo Aloysius 1 Bandung berhasil mengalahkan 181 peserta dari 23 negara.</p>
+
+                        <a href="blog/post_03.html" class="hover-btn-new orange"><span>Read More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	
+
+<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Kata Alumni</h3>
+                <p>Kata para alumni yang pernah bersekolah di SMA Negeri Praktikum Web</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_01.png" alt="" class="img-fluid">
+                                <h4>James Fernando </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Menyenangkan!</h3>
+                                <p class="lead">Menurut saya, SMA Negeri Praktikum Web adalah Sekolah yang menarik, disini kami diajarkan dengan cara yang menyenangkan. SMA Negeri Praktikum Web juga memiliki banyak kegiatan non akademis dan ektrakulikuler untuk mengembangkan minat dan bakat</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_02.png" alt="" class="img-fluid">
+                                <h4>Jacques Philips </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Asik!</h3>
+                                <p class="lead">SMA Negeri Praktikum Web itu adalah sekolah yang asik, seru, dan kalian bakal dapet banyak ilmu yang bermanfaat buat masa deoan jika kalian serius dan berusaha mencari ilmu-ilmu itu</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                <img src="images/testi_03.png" alt="" class="img-fluid ">
+                                <h4>Venanda Mercy </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Seru!</h3>
+                                <p class="lead">Sekolah di SMA Negeri Praktikum Web itu seru banget. Sekolah yang serba oke, karena dari pembelanjaran yang diterapkan asyik banget, gurunya juga super keren, semuanya dapet deh paket komplit gitu </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                        
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.pertamina.com/"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.amd-id.com/"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://bumn.go.id/"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.microsoft.com/id-id"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.astra.co.id/"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.lenovo.com/id/in/"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Bersama-sama mewujudkan peserta didik yang beriman, cerdas, terampil, dan berwawasan global</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="teachers.html">Guru</a></li>
+							<li><a href="about.html">About</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:info@smanprakweb.ac.id">info@smanprakweb.ac.id</a></li>
+                            <li><a href="index.html">www.smanprakweb.ac.id</a></li>
+                            <li>+6280123456789</li>
+                            <li><a href="https://www.google.com/maps/place/Yogyakarta,+Kota+Yogyakarta,+Daerah+Istimewa+Yogyakarta/@-7.803164,110.3398254,13z/data=!3m1!4b1!4m5!3m4!1s0x2e7a5787bd5b6bc5:0x21723fd4d3684f71!8m2!3d-7.7955798!4d110.3694896" target="blank">Kota Yogyakarta, Indonesia</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>SMA Negeri Praktikum Web</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">LOG IN</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Student</a></li>
+					<li><a href="#Teacher" data-toggle="tab">Teacher</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form action="dashboard/php/multiLevel_studentLogin.php" method="POST" role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="username" id="username" placeholder="Username" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="password" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Login
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Teacher">
+						<form action="dashboard/php/multiLevel_teacherLogin.php" method="POST" role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="username" id="username" placeholder="Username" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" name="password" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Login
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+
+<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" style="width: 80px;" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
+						<li class="nav-item"><a class="nav-link" href="teachers.html">Guru</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li> 
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Log In</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>Blog<span class="m_1">PRIMA DALAM PRESTASI, SANTUN DALAM PERILAKU</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <p class="lead">Website ini adalah sarana komunikasi antara pihak sekolah dengan pihak-pihak terkait baik mengenai infomasi terkait dengan kegiatan belajar mengajar maupun mengenai prestasi akademik dan non-akademik siswa SMA Negeri Praktikum Web</p>
+                </div>
+            </div><!-- end title -->
+
+            <hr class="invis"> 
+
+            <div class="row"> 
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_1.jpeg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 14, 2021</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">Medali Olimpiade Informatika Asia-Pasifik</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>Siswa SMA Negeri Praktikum Web berhasil meraih satu medali emas, tiga medali perak, dan dua medali perunggu dalam perhelatan Olimpiade Informatika Asia Pacific Informatics Olympiad (APIO) 2021 pada 21-26 Mei 2021. </p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_02.html"><span>Read More<span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_2.jpeg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 15, 2015</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+                            
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">Medali Olimpiade Fisika</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>SMA Negeri Praktikum Web berhasil meraih medali emas dari kompetisi Asian Physics Olympiad (APhO). Dikutip dari rilis yang diterima detikEdu, Peter juga berhasil meraih nilai tertinggi kedua dalam kompetisi tersebut.</p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_03.html"><span>Read More</span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_3.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 16, 2021</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">500 Alumni SMA Negeri Praktikum Web lolos SBMPTN</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>Kabar gembira kembali menyeruak di lingkungan SMA Negeri Praktikum Web. Dari hasil pengumuman SBMPTN 2021, Senin, (14/6/2021), terdapat 500 alumni yang diterima di berbagai perguruan tinggi negeri di Indonesia</p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_04.html"><span>Read More</span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="hr3"> 
+
+            <div class="row"> 
+                <div class="col-lg-4 col-md-6 col-12">
+                   <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_4.jpeg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 17, 2021</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+                            
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">Jadwal PPDB SMA Negeri Praktikum Web diundur</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>Jadwal penerimaan peserta didik baru (PPDB) untuk SMA Negeri Praktikum Web diundur. Kepala sekolah mengatakan bahwa hal itu dilakukan karena ada kendala teknis.</p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_05.html"><span>Read More</span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_5.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 18, 2021</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+                            
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">Siswi SMA Negeri Praktikum Web Cetak Rekor dan Lolos ke Olimpiade Tokyo 2020</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>Mutiara Rahma Putri (16) pelajar SMA Negeri Praktikum Web, berhasil mencetak sejarah di nomor rowing ganda putri berhasil lolos Olimpiade Tokyo 2020.</p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_06.html"><span>Read More</span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="blog-item">
+						<div class="image-blog">
+							<img src="images/blog/post_6.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="meta-info-blog">
+							<span><i class="fa fa-calendar"></i> <a href="#">June 19, 2021</a> </span>
+                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
+                            
+						</div>
+						<div class="blog-title">
+							<h2><a href="#" title="">Seleksi Kompetisi Sains Nasional Setingkat SMA, 151.137 Pelajar Mendaftar</a></h2>
+						</div>
+						<div class="blog-desc">
+							<p>Pusat Prestasi Nasional mengadakan tahap seleksi dalam menjaring siswa terbaik di tingkat kota/kabupaten melalui Kompetisi Sains Nasional (KSN) Tingkat Kota/Kabupaten untuk jenjang SMA/MA</p>
+						</div>
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="blog/post_07.html"><span>Read More</span></a>
+						</div>
+					</div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    <div class="parallax section dbcolor">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.pertamina.com/"><img src="images/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.amd-id.com/"><img src="images/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://bumn.go.id/"><img src="images/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.microsoft.com/id-id"><img src="images/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.astra.co.id/"><img src="images/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="https://www.lenovo.com/id/in/"><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+	<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Bersama-sama mewujudkan peserta didik yang beriman, cerdas, terampil, dan berwawasan global</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="teachers.html">Guru</a></li>
+							<li><a href="about.html">About</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:info@smanprakweb.ac.id">info@smanprakweb.ac.id</a></li>
+                            <li><a href="index.html">www.smanprakweb.ac.id</a></li>
+                            <li>+6280123456789</li>
+                            <li><a href="https://www.google.com/maps/place/Yogyakarta,+Kota+Yogyakarta,+Daerah+Istimewa+Yogyakarta/@-7.803164,110.3398254,13z/data=!3m1!4b1!4m5!3m4!1s0x2e7a5787bd5b6bc5:0x21723fd4d3684f71!8m2!3d-7.7955798!4d110.3694896" target="blank">Kota Yogyakarta, Indonesia</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
